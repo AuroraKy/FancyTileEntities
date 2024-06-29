@@ -2,6 +2,7 @@ local ridgeGate = {}
 local mods = require("mods")
 local fancyTileEntitieshelper = mods.requireFromPlugin("libraries.fancy_tile_entities_helper")
 
+ridgeGate.associatedMods = {"FancyTileEntities"}
 ridgeGate.name = "FancyTileEntities/FancyRidgeGate"
 ridgeGate.depth = 0
 ridgeGate.nodeLineRenderType = "line"
@@ -18,7 +19,8 @@ ridgeGate.placements = {
 
 ridgeGate.fieldInformation = {
     tileData = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     }
 }
 

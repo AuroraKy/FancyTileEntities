@@ -2,6 +2,7 @@ local introCrusher = {}
 local mods = require("mods")
 local fancyTileEntitieshelper = mods.requireFromPlugin("libraries.fancy_tile_entities_helper")
 
+introCrusher.associatedMods = {"FancyTileEntities"}
 introCrusher.name = "FancyTileEntities/FancyIntroCrusher"
 introCrusher.depth = 0
 introCrusher.nodeLineRenderType = "line"
@@ -20,7 +21,8 @@ introCrusher.placements = {
 
 introCrusher.fieldInformation = {
     tileData = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     }
 }
 

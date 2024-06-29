@@ -2,6 +2,7 @@ local fakeTilesHelper = require("helpers.fake_tiles")
 
 local introCrusher = {}
 
+introCrusher.associatedMods = {"FancyTileEntities"}
 introCrusher.name = "FancyTileEntities/BetterIntroCrusher"
 introCrusher.depth = 0
 introCrusher.nodeLineRenderType = "line"

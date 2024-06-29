@@ -2,6 +2,7 @@ local fakeTilesHelper = require("helpers.fake_tiles")
 
 local ridgeGate = {}
 
+ridgeGate.associatedMods = {"FancyTileEntities"}
 ridgeGate.name = "FancyTileEntities/BetterRidgeGate"
 ridgeGate.depth = 0
 ridgeGate.nodeLineRenderType = "line"

@@ -3,6 +3,7 @@ local fancyTileEntitieshelper = mods.requireFromPlugin("libraries.fancy_tile_ent
 
 local fallingBlock = {}
 
+fallingBlock.associatedMods = {"FancyTileEntities"}
 fallingBlock.name = "FancyTileEntities/FancyFallingBlock"
 fallingBlock.placements = {
     {
@@ -33,10 +34,12 @@ fallingBlock.placements = {
 
 fallingBlock.fieldInformation = {
     tileData = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     },
     tileDataHighlight = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     }
 }
 

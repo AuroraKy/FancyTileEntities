@@ -3,6 +3,7 @@ local dashBlock = {}
 local mods = require("mods")
 local fancyTileEntitieshelper = mods.requireFromPlugin("libraries.fancy_tile_entities_helper")
 
+dashBlock.associatedMods = {"FancyTileEntities"}
 dashBlock.name = "FancyTileEntities/FancyDashBlock"
 dashBlock.depth = 0
 dashBlock.placements = {
@@ -19,7 +20,8 @@ dashBlock.placements = {
 
 dashBlock.fieldInformation = {
     tileData = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     }
 }
 

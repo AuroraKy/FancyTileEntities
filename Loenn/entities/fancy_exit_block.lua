@@ -3,6 +3,7 @@ local exitBlock = {}
 local mods = require("mods")
 local fancyTileEntitieshelper = mods.requireFromPlugin("libraries.fancy_tile_entities_helper")
 
+exitBlock.associatedMods = {"FancyTileEntities"}
 exitBlock.name = "FancyTileEntities/FancyExitBlock"
 exitBlock.depth = -13000
 exitBlock.placements = {
@@ -17,7 +18,8 @@ exitBlock.placements = {
 
 exitBlock.fieldInformation = {
     tileData = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     }
 }
 

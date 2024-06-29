@@ -2,6 +2,7 @@ local coverupWall = {}
 local mods = require("mods")
 local fancyTileEntitieshelper = mods.requireFromPlugin("libraries.fancy_tile_entities_helper")
 
+coverupWall.associatedMods = {"FancyTileEntities"}
 coverupWall.name = "FancyTileEntities/FancyCoverupWall"
 coverupWall.depth = -13000
 coverupWall.placements = {
@@ -16,7 +17,8 @@ coverupWall.placements = {
 
 coverupWall.fieldInformation = {
     tileData = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     }
 }
 

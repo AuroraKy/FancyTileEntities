@@ -169,7 +169,20 @@ function TileEditor.getTileEditor(field, options)
 
     local callback = options.callback or function() end
 
-    local width, height = utils.clamp(options.width or 8, 0, 32), utils.clamp(options.height or 8, 0, 32)
+    
+    local w
+    local h
+    if field.fte_entityRef then
+        w = field.fte_entityRef.width/8
+        h = field.fte_entityRef.height/8
+        if w > 32 or h > 32 then UPSCALE = 1
+        elseif w > 16 or h > 16 then UPSCALE = 2
+        elseif w > 8 or h > 8 then UPSCALE = 4
+        elseif w > 4 or h > 4 then UPSCALE = 8
+        else UPSCALE = 16 end
+    end
+
+    local width, height = w or utils.clamp(options.width or 8, 0, 32), h or utils.clamp(options.height or 8, 0, 32)
     local areaWidth = width*8*UPSCALE
     local areaHeight = height*8*UPSCALE
     local tileData = TileEditor.getMatrixFromField(field:getValue(), width, height) or matrix.filled("0", width, height)

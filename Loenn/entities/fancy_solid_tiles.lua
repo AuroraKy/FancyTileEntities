@@ -3,6 +3,7 @@ local fancyTileEntitieshelper = mods.requireFromPlugin("libraries.fancy_tile_ent
 
 local solidTiles = {}
 
+solidTiles.associatedMods = {"FancyTileEntities"}
 solidTiles.name = "FancyTileEntities/FancySolidTiles"
 solidTiles.placements = {
     name = "solid_tiles",
@@ -17,7 +18,8 @@ solidTiles.placements = {
 
 solidTiles.fieldInformation = {
     tileData = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     }
 }
 

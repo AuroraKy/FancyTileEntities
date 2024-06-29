@@ -4,6 +4,7 @@ local movingBlock = {}
 local mods = require("mods")
 local fancyTileEntitieshelper = mods.requireFromPlugin("libraries.fancy_tile_entities_helper")
 
+movingBlock.associatedMods = {"FancyTileEntities"}
 movingBlock.name = "FancyTileEntities/FancyFinalBossMovingBlock"
 movingBlock.depth = 0
 movingBlock.nodeLineRenderType = "line"
@@ -26,10 +27,12 @@ movingBlock.placements = {
 
 movingBlock.fieldInformation = {
     tileData = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     },
     tileDataHighlight = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     }
 }
 

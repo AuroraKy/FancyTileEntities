@@ -3,6 +3,7 @@ local fakeWall = {}
 local mods = require("mods")
 local fancyTileEntitieshelper = mods.requireFromPlugin("libraries.fancy_tile_entities_helper")
 
+fakeWall.associatedMods = {"FancyTileEntities"}
 fakeWall.name = "FancyTileEntities/FancyFakeWall"
 fakeWall.depth = -13000
 fakeWall.placements = {
@@ -16,7 +17,8 @@ fakeWall.placements = {
 
 fakeWall.fieldInformation = {
     tileData = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     }
 }
 

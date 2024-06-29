@@ -3,6 +3,7 @@ local crumbleWall = {}
 local mods = require("mods")
 local fancyTileEntitieshelper = mods.requireFromPlugin("libraries.fancy_tile_entities_helper")
 
+crumbleWall.associatedMods = {"FancyTileEntities"}
 crumbleWall.name = "FancyTileEntities/FancyCrumbleWallOnRumble"
 crumbleWall.placements = {
     name = "crumble_wall",
@@ -21,7 +22,8 @@ end
 
 crumbleWall.fieldInformation = {
     tileData = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     }
 }
 

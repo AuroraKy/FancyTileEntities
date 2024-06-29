@@ -5,6 +5,7 @@ local fancyTileEntitieshelper = mods.requireFromPlugin("libraries.fancy_tile_ent
 
 local conditionBlock = {}
 
+conditionBlock.associatedMods = {"FancyTileEntities"}
 conditionBlock.name = "FancyTileEntities/FancyConditionBlock=LoadConditionBlock"
 conditionBlock.depth = -13000
 conditionBlock.placements = {
@@ -23,7 +24,8 @@ conditionBlock.fieldInformation = {
         options = enums.condition_block_conditions
     },
     tileData = {
-        fieldType = "FancyTileEntities.buttonStringField"
+        fieldType = "FancyTileEntities.buttonStringField",
+        fte_passData = true
     }
 }
 conditionBlock.sprite = fancyTileEntitieshelper.getEntitySpriteFunction("blendEdges", "tilesFg", {1, 1, 1, 1})
